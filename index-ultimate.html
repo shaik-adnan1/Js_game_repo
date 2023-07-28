@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="style-ultimate.css">
+        
+        <title>Pig Game</title>
+    </head>
+
+    <body class='body-class' style='background-size: cover; background-position: center;'>
+        <div class="wrapper clearfix">
+            <div class='rules-container popup'>
+                <div class='heading'>Rules first</div>
+                <div class='rules'>
+                    <p class='rule-1'>The game has 2 players, playing in rounds</p>
+                    <p class='rule-2'>In each turn, a player rolls a dice as many times as he whishes. Each result get added to his ROUND score</p>
+                    <p class='rule-3'>BUT, if the player rolls a 1, all from his ROUND score gets lost. After that, it's the next player's turn</p>
+                    <p class='rule-4'>The player can choose to 'Hold', which means that his ROUND score gets added to his GLOBAL score. After that, it's the next player's turn</p>
+                    <p class='rule-5'>The first player to reach 50 points GLOBAL score wins the game</p>
+                    <p class='rule-6'>You can change the predefined score of 50 in the <a href="end-score">'FINAL SCORE'</a> input box <b class='luck'>Good Luck!</b></p>
+                    <button class='wishes start-btn'>Get Started!</button>
+                </div>
+            </div>
+            <div class='rules-container-dark'>
+                <div class='heading'><i class="ion-fireball"></i>New Rules</div>
+                <div class='rules'>
+                    <p class='rule-1'>Including the rules before here are some <b class='luck'>New rules</b></p>
+                    <p class='rule-2'>player <b class='luck'>looses 20</b> points his ENTIRE score when he rolls two 6 in a row. After that, it's the next player's turn.</p>
+                    <p class='rule-3'>The Global score is increased to 100 points. so first player reaching GLOBAL score wins the game</p>
+                    <p class='rule-4'>Another dice is added to make the game faster to reach GS('Global Score') and interesting.<b class='luck'>Good Luck!</b></p>
+                    <button class='wishes start-btn start-btn-dark'>Get Started!</button>
+                </div>
+            </div>
+            <div class="player-info-container">
+                <div class='heading'>Hello players</div>
+                <div class="short-text"><p>Enter your name <b class='player-0-name luck'>player-1</b></p>
+                    <div class="input-name-0">
+                        <input type="text" placeholder="Player-1" class='player-0-input feild' id='player-1-name' required maxlength="10">
+                        <label for="player-1-name">Player-1</label>
+                    </div>
+                    <div class="input-name-1">
+                        <input type="text" placeholder="Player-2" class='player-1-input feild' id='player-2-name' required maxlength="10">
+                        <label for="player-2-name" class='lables'>Player-2</label>
+                    </div>
+                </div>
+                <button class='wishes go-btn'>Go</button>
+            </div>
+            <div class="player-0-panel active">
+                <div class="player-name" id="name-0">Player-1</div>
+                <div class="player-score" id="score-0">43</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-0">11</div>
+                </div>
+                <!-- <button id="start-btn">Let's Go</button> -->
+            </div>
+            
+            <div class="player-1-panel">
+                <div class="player-name" id="name-1">Player 2</div>
+                <div class="player-score" id="score-1">72</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-1">0</div>
+                </div>
+            </div>
+            
+            <button class="btn-new btn-new-new"><i class="ion-ios-plus-outline"></i>New game</button>
+            <button class="btn-roll btn-roll-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+            <button class="btn-hold btn-hold-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+            <button class='m-btn normal'><i class="ion-coffee"></i>Normal Mode</button>
+            <button class='m-btn hard'><i class="ion-nuclear"></i>Hard Mode</button>
+            <button class='m-btn normal change-name'><i class="ion-compose"></i>Edit Player Name</button>
+            <button class='m-btn hard rules-btn'><i class="ion-clipboard"></i>Rules</button>
+            <input type="number" placeholder="Final Score" class='final-score feild' id='end-score' required">
+            
+            <img src="./images/dice-dark-5.png" alt="Dice1" class="dice"  id="dice-1">
+            <img src="./images/dice-dark-5.png" alt="Dice1" class="dice"  id="dice-2">
+        </div>
+        <!-- <div class="winner-name-display">Player-1 wins!</div> -->
+        <script src="app-ultimate.js"></script>
+    </body>
+</html>
+
+<!-- 
+BOSY CHANGE
+background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0));
+color: #555; -->
+<!--
+ !Important   
+.short-text p.dark {
+    color: #ccc;
+}
+
+    player-name ---- 
+    left: 45;
+!Important
+::-webkit-input-placeholder {
+    color: #999;
+}
+
+btn-new btn-roll btn-hold - change color to #fff;----- JS ------
+
+
+
+
+
+
+
+/*****************************************
+* DARK MODE
+*/
+
+.wrapper-dark {
+    background-color: rgb(62, 62, 62);/*change*/
+    box-shadow: 0px 0px 10px 5px rgba(117, 117, 117, 0.3);/*change*/
+}
+
+.player-0-panel-dark,
+.player-1-panel-dark {
+    padding: 90px;/*change ini-100*/
+}
+
+.player-dark {
+    background: #EB4D4D;
+    color: #222;
+}
+
+.active-dark {
+    background-color: rgb(44, 44, 44);
+}
+
+.heading-dark {
+    width: 150px;
+}
+
+.player-name-dark {
+    display: inline-block;
+    background: #EB4D4D;
+    width: auto;
+    color:#555;
+    padding: 2px;
+    margin-left: 2px;
+}
+
+
+.player-name-dark::first-letter {
+    font-size: 48px;
+    color: #fff;
+}
+
+.final-score-dark {
+    color: #000;
+}
+
+.player-info-container-dark {
+    background: rgb(47, 47, 47);
+    color: #ccc;
+}
+
+
+
+
+.player-name::first-letter {
+    font-size: 48px;
+    color: #fff;
+
+}
+
+
+FEILD -- transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+
+
+
+    heading ---- 
+    padding: 4px 2px;
+
+
+    
+i:not(.ion-fireball) {
+    color: #EB4D4D;
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 32px;
+    line-height: 1;
+    vertical-align: text-top;
+    margin-top: -4px;
+    transition: margin 0.3s;
+}
+-->
